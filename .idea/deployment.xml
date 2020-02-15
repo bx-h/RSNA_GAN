@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="boxi@172.18.167.15:22" autoUploadExternalChanges="true">
+    <serverData>
+      <paths name="boxi@172.18.167.15:22">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/data15/boxi/anomaly detection/code/RSNA_GAN" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="weishizheng@localhost:6000">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
