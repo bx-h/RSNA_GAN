@@ -7,6 +7,20 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="RSNA_GAN" />
   </component>
@@ -17,7 +31,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1XekQM4ZksWVcxtKgA05S4R4IkY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -26,7 +44,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -78,6 +96,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="train_unet (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RSNA_GAN" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train_unet.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="train_unet" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="RSNA_GAN" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -103,6 +143,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.load_unet" />
+        <item itemvalue="Python.train_unet (1)" />
         <item itemvalue="Python.train_unet" />
         <item itemvalue="Python.Pneumonia" />
       </list>
@@ -132,7 +173,7 @@
       <updated>1581413930745</updated>
       <workItem from="1581413934542" duration="21472000" />
       <workItem from="1581655325469" duration="23641000" />
-      <workItem from="1581755046700" duration="6862000" />
+      <workItem from="1581755046700" duration="31584000" />
     </task>
     <servers />
   </component>
@@ -144,46 +185,46 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="121" y="111" width="1095" height="504" key="DirDiffDialog/0.0.1280.689@0.0.1280.689" timestamp="1581669949898" />
-    <state x="421" y="101" key="FileChooserDialogImpl" timestamp="1581581819614">
+    <state x="421" y="101" key="FileChooserDialogImpl" timestamp="1581773316328">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="421" y="101" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1581581819614" />
-    <state width="1237" height="145" key="GridCell.Tab.0.bottom" timestamp="1581763062755">
+    <state x="421" y="101" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1581773316328" />
+    <state width="1237" height="308" key="GridCell.Tab.0.bottom" timestamp="1581856411398">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="145" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1581763062755" />
-    <state width="1237" height="145" key="GridCell.Tab.0.center" timestamp="1581763062755">
+    <state width="1237" height="308" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1581856411398" />
+    <state width="1237" height="308" key="GridCell.Tab.0.center" timestamp="1581856411398">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="145" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1581763062755" />
-    <state width="1237" height="145" key="GridCell.Tab.0.left" timestamp="1581763062755">
+    <state width="1237" height="308" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1581856411398" />
+    <state width="1237" height="308" key="GridCell.Tab.0.left" timestamp="1581856411398">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="145" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1581763062755" />
-    <state width="1237" height="145" key="GridCell.Tab.0.right" timestamp="1581763062755">
+    <state width="1237" height="308" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1581856411398" />
+    <state width="1237" height="308" key="GridCell.Tab.0.right" timestamp="1581856411398">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="145" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1581763062755" />
-    <state width="1237" height="208" key="GridCell.Tab.1.bottom" timestamp="1581685519663">
+    <state width="1237" height="308" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1581856411398" />
+    <state width="1237" height="82" key="GridCell.Tab.1.bottom" timestamp="1581851597420">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="208" key="GridCell.Tab.1.bottom/0.0.1280.689@0.0.1280.689" timestamp="1581685519663" />
-    <state width="1237" height="208" key="GridCell.Tab.1.center" timestamp="1581685519663">
+    <state width="1237" height="82" key="GridCell.Tab.1.bottom/0.0.1280.689@0.0.1280.689" timestamp="1581851597420" />
+    <state width="1237" height="82" key="GridCell.Tab.1.center" timestamp="1581851597419">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="208" key="GridCell.Tab.1.center/0.0.1280.689@0.0.1280.689" timestamp="1581685519663" />
-    <state width="1237" height="208" key="GridCell.Tab.1.left" timestamp="1581685519663">
+    <state width="1237" height="82" key="GridCell.Tab.1.center/0.0.1280.689@0.0.1280.689" timestamp="1581851597419" />
+    <state width="1237" height="82" key="GridCell.Tab.1.left" timestamp="1581851597419">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="208" key="GridCell.Tab.1.left/0.0.1280.689@0.0.1280.689" timestamp="1581685519663" />
-    <state width="1237" height="208" key="GridCell.Tab.1.right" timestamp="1581685519663">
+    <state width="1237" height="82" key="GridCell.Tab.1.left/0.0.1280.689@0.0.1280.689" timestamp="1581851597419" />
+    <state width="1237" height="82" key="GridCell.Tab.1.right" timestamp="1581851597419">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="208" key="GridCell.Tab.1.right/0.0.1280.689@0.0.1280.689" timestamp="1581685519663" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1581665614969">
+    <state width="1237" height="82" key="GridCell.Tab.1.right/0.0.1280.689@0.0.1280.689" timestamp="1581851597419" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1581773318829">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1581665614969" />
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1581773318829" />
     <state x="325" y="170" key="com.intellij.ide.util.TipDialog" timestamp="1581755047644">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -195,7 +236,8 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/RSNA_GAN$Pneumonia.coverage" NAME="Pneumonia Coverage Results" MODIFIED="1581664685372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RSNA_GAN$train_unet__1_.coverage" NAME="train_unet (1) Coverage Results" MODIFIED="1581831049526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RSNA_GAN$getmask.coverage" NAME="getmask Coverage Results" MODIFIED="1581669076412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/RSNA_GAN$load_unet.coverage" NAME="load_unet Coverage Results" MODIFIED="1581763062746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RSNA_GAN$load_unet.coverage" NAME="load_unet Coverage Results" MODIFIED="1581856411392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

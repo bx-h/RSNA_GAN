@@ -81,7 +81,7 @@ with open(CONFIG_FP, 'r') as f:
     config = json.load(f)
 
 # increase the number of epochs for better prediction
-history = train.train(config, name, images,masks, num_epochs=20)
+history = train.train(config, name, images,masks, num_epochs=40)
 
 # -------------------------------------- see the train process-----------------------
 def image_grid():
