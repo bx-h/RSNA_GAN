@@ -22,8 +22,18 @@ root = "/data15/boxi/anomaly detection/data/"
 
 class AddContrast(object):
     def __call__(self, sample):
+        trsf = transforms.Compose(
+            [
+                transforms.Grayscale(1),
+                transforms.ToTensor()
+            ]
+        )
+        img = trsf(sample).squeeze()  # [C, H, W] -> [H, W]
+        if img[256][256] < 0.15:
+            contrast = 1.0
+        else:
+            contrast = 3.0
         enh_con = ImageEnhance.Contrast(sample)
-        contrast = 3.0
         img_contrasted = enh_con.enhance(contrast)
         return img_contrasted
 
@@ -36,12 +46,15 @@ transform = transforms.Compose(
     ]
 )
 dataset = PneumoniaDataset(root=root, train=False, transform=transform)
-img, landmark = dataset[5] # PIL.Image.Image mode=RGB size=1024*1024
+img, landmark = dataset[3] # PIL.Image.Image mode=RGB size=1024*1024
+
+a = img.squeeze().numpy()
+# pic1: [0,0.6745] a[256][256] = 0.3647 median:0.4470
+# pic7: [0,0.9019] a[256][256] = 0.1372 median:0.4745
 
 
 # 查看图片
 logdir = "/data15/boxi/anomaly detection/runs/resizeImage/" + datetime.now().strftime("%Y%m%d-%H%M%S")
-
 
 
 def show_img(img1, img2, img3, img4, img5, img6, tb=False, tb_dir=None):
@@ -138,6 +151,7 @@ def findcontour(img):
     img2 = np.array(img * 255, dtype=np.uint8)
     ret, binary = cv2.threshold(img2,127,255,cv2.THRESH_BINARY)
     contours, hierarchy = cv2.findContours(binary, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    print(contours)
     areaArray = []
     for i, c in enumerate(contours):
         area = cv2.contourArea(c)
@@ -161,6 +175,7 @@ def crop_by_countours(origin_img, countours):
         img1 : torch.tensor[h, w]
         img2 : torch.tensor[h, w]
     """
+    print(countours)
     c1 = countours[0].reshape(-1, 2)
     c2 = countours[1].reshape(-1, 2)
     # result_c = result.copy()
@@ -192,15 +207,18 @@ def crop_by_countours(origin_img, countours):
 
 def pack_up_all(img):
     roi, _ = get_roi(img)
-    # 转为0,1 mask
-    # roi[roi < 0.01] = 0
-    # roi[roi > 0] = 1
+ #   转为0,1 mask
+ #    roi[roi < 0.01] = 0
+ #    roi[roi > 0] = 1
     
     de_b_noise, er, de_w_noise, dialation = denoising(roi)
 
     de_b_noise = torch.from_numpy(de_b_noise)
     er = torch.from_numpy(er)
     de_w_noise = torch.from_numpy(de_w_noise)
+
+    dialation[dialation < 0.01] = 0
+    dialation[dialation > 0] = 1
     dialation = torch.from_numpy(dialation)
 
     show_img(img.squeeze(), roi, de_b_noise, er, de_w_noise, dialation)

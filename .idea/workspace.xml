@@ -44,6 +44,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
@@ -196,7 +197,7 @@
       <updated>1581413930745</updated>
       <workItem from="1581413934542" duration="21472000" />
       <workItem from="1581655325469" duration="23641000" />
-      <workItem from="1581755046700" duration="58321000" />
+      <workItem from="1581755046700" duration="64999000" />
     </task>
     <servers />
   </component>
@@ -212,38 +213,38 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="421" y="101" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1581773316328" />
-    <state width="1237" height="146" key="GridCell.Tab.0.bottom" timestamp="1581943753606">
+    <state width="1237" height="148" key="GridCell.Tab.0.bottom" timestamp="1581952486896">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="146" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1581943753606" />
-    <state width="1237" height="146" key="GridCell.Tab.0.center" timestamp="1581943753606">
+    <state width="1237" height="148" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1581952486896" />
+    <state width="1237" height="148" key="GridCell.Tab.0.center" timestamp="1581952486896">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="146" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1581943753606" />
-    <state width="1237" height="146" key="GridCell.Tab.0.left" timestamp="1581943753606">
+    <state width="1237" height="148" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1581952486896" />
+    <state width="1237" height="148" key="GridCell.Tab.0.left" timestamp="1581952486896">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="146" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1581943753606" />
-    <state width="1237" height="146" key="GridCell.Tab.0.right" timestamp="1581943753606">
+    <state width="1237" height="148" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1581952486896" />
+    <state width="1237" height="148" key="GridCell.Tab.0.right" timestamp="1581952486896">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="146" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1581943753606" />
-    <state width="1237" height="186" key="GridCell.Tab.1.bottom" timestamp="1581943102826">
+    <state width="1237" height="148" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1581952486896" />
+    <state width="1237" height="186" key="GridCell.Tab.1.bottom" timestamp="1581952447712">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="186" key="GridCell.Tab.1.bottom/0.0.1280.689@0.0.1280.689" timestamp="1581943102826" />
-    <state width="1237" height="186" key="GridCell.Tab.1.center" timestamp="1581943102826">
+    <state width="1237" height="186" key="GridCell.Tab.1.bottom/0.0.1280.689@0.0.1280.689" timestamp="1581952447712" />
+    <state width="1237" height="186" key="GridCell.Tab.1.center" timestamp="1581952447712">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="186" key="GridCell.Tab.1.center/0.0.1280.689@0.0.1280.689" timestamp="1581943102826" />
-    <state width="1237" height="186" key="GridCell.Tab.1.left" timestamp="1581943102825">
+    <state width="1237" height="186" key="GridCell.Tab.1.center/0.0.1280.689@0.0.1280.689" timestamp="1581952447712" />
+    <state width="1237" height="186" key="GridCell.Tab.1.left" timestamp="1581952447712">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="186" key="GridCell.Tab.1.left/0.0.1280.689@0.0.1280.689" timestamp="1581943102825" />
-    <state width="1237" height="186" key="GridCell.Tab.1.right" timestamp="1581943102826">
+    <state width="1237" height="186" key="GridCell.Tab.1.left/0.0.1280.689@0.0.1280.689" timestamp="1581952447712" />
+    <state width="1237" height="186" key="GridCell.Tab.1.right" timestamp="1581952447712">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="186" key="GridCell.Tab.1.right/0.0.1280.689@0.0.1280.689" timestamp="1581943102826" />
+    <state width="1237" height="186" key="GridCell.Tab.1.right/0.0.1280.689@0.0.1280.689" timestamp="1581952447712" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1581773318829">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -265,11 +266,44 @@
     </state>
     <state x="303" y="10" key="search.everywhere.popup/0.0.1280.689@0.0.1280.689" timestamp="1581910042380" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/use_unet.py</url>
+          <line>178</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/use_unet.py</url>
+          <line>154</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/use_unet.py</url>
+          <line>56</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/use_unet.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="np.median(a)" language="Python" />
+        <watch expression="img.size()" language="Python" />
+        <watch expression="img[300][300]" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/RSNA_GAN$Pneumonia.coverage" NAME="Pneumonia Coverage Results" MODIFIED="1581911061857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RSNA_GAN$train_unet__1_.coverage" NAME="train_unet (1) Coverage Results" MODIFIED="1581831049526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RSNA_GAN$preprocess.coverage" NAME="preprocess Coverage Results" MODIFIED="1581919015603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/RSNA_GAN$use_unet__1_.coverage" NAME="use_unet (1) Coverage Results" MODIFIED="1581943753599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RSNA_GAN$use_unet__1_.coverage" NAME="use_unet (1) Coverage Results" MODIFIED="1581952486892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RSNA_GAN$getmask.coverage" NAME="getmask Coverage Results" MODIFIED="1581669076412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RSNA_GAN$load_unet.coverage" NAME="load_unet Coverage Results" MODIFIED="1581856411392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
