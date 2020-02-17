@@ -51,7 +51,7 @@
       <recent name="C:\Users\hbx\PycharmProjects\RSNA_GAN\Pytorch-UNet-master" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.load_unet">
+  <component name="RunManager" selected="Python.use_unet (1)">
     <configuration name="Pneumonia" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="RSNA_GAN" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -74,7 +74,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="load_unet" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="preprocess" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="RSNA_GAN" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -87,7 +87,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/load_unet.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/preprocess.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -118,7 +118,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="train_unet" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="use_unet (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="RSNA_GAN" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -131,7 +131,29 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\hbx\PycharmProjects\RSNA_GAN\train_unet.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/use_unet.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="use_unet" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RSNA_GAN" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\hbx\PycharmProjects\RSNA_GAN\use_unet.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -142,10 +164,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.load_unet" />
-        <item itemvalue="Python.train_unet (1)" />
-        <item itemvalue="Python.train_unet" />
+        <item itemvalue="Python.use_unet (1)" />
+        <item itemvalue="Python.preprocess" />
         <item itemvalue="Python.Pneumonia" />
+        <item itemvalue="Python.use_unet" />
+        <item itemvalue="Python.train_unet (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -173,7 +196,7 @@
       <updated>1581413930745</updated>
       <workItem from="1581413934542" duration="21472000" />
       <workItem from="1581655325469" duration="23641000" />
-      <workItem from="1581755046700" duration="31584000" />
+      <workItem from="1581755046700" duration="58321000" />
     </task>
     <servers />
   </component>
@@ -189,42 +212,46 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="421" y="101" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1581773316328" />
-    <state width="1237" height="308" key="GridCell.Tab.0.bottom" timestamp="1581856411398">
+    <state width="1237" height="146" key="GridCell.Tab.0.bottom" timestamp="1581943753606">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="308" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1581856411398" />
-    <state width="1237" height="308" key="GridCell.Tab.0.center" timestamp="1581856411398">
+    <state width="1237" height="146" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1581943753606" />
+    <state width="1237" height="146" key="GridCell.Tab.0.center" timestamp="1581943753606">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="308" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1581856411398" />
-    <state width="1237" height="308" key="GridCell.Tab.0.left" timestamp="1581856411398">
+    <state width="1237" height="146" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1581943753606" />
+    <state width="1237" height="146" key="GridCell.Tab.0.left" timestamp="1581943753606">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="308" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1581856411398" />
-    <state width="1237" height="308" key="GridCell.Tab.0.right" timestamp="1581856411398">
+    <state width="1237" height="146" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1581943753606" />
+    <state width="1237" height="146" key="GridCell.Tab.0.right" timestamp="1581943753606">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="308" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1581856411398" />
-    <state width="1237" height="82" key="GridCell.Tab.1.bottom" timestamp="1581851597420">
+    <state width="1237" height="146" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1581943753606" />
+    <state width="1237" height="186" key="GridCell.Tab.1.bottom" timestamp="1581943102826">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="82" key="GridCell.Tab.1.bottom/0.0.1280.689@0.0.1280.689" timestamp="1581851597420" />
-    <state width="1237" height="82" key="GridCell.Tab.1.center" timestamp="1581851597419">
+    <state width="1237" height="186" key="GridCell.Tab.1.bottom/0.0.1280.689@0.0.1280.689" timestamp="1581943102826" />
+    <state width="1237" height="186" key="GridCell.Tab.1.center" timestamp="1581943102826">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="82" key="GridCell.Tab.1.center/0.0.1280.689@0.0.1280.689" timestamp="1581851597419" />
-    <state width="1237" height="82" key="GridCell.Tab.1.left" timestamp="1581851597419">
+    <state width="1237" height="186" key="GridCell.Tab.1.center/0.0.1280.689@0.0.1280.689" timestamp="1581943102826" />
+    <state width="1237" height="186" key="GridCell.Tab.1.left" timestamp="1581943102825">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="82" key="GridCell.Tab.1.left/0.0.1280.689@0.0.1280.689" timestamp="1581851597419" />
-    <state width="1237" height="82" key="GridCell.Tab.1.right" timestamp="1581851597419">
+    <state width="1237" height="186" key="GridCell.Tab.1.left/0.0.1280.689@0.0.1280.689" timestamp="1581943102825" />
+    <state width="1237" height="186" key="GridCell.Tab.1.right" timestamp="1581943102826">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="82" key="GridCell.Tab.1.right/0.0.1280.689@0.0.1280.689" timestamp="1581851597419" />
+    <state width="1237" height="186" key="GridCell.Tab.1.right/0.0.1280.689@0.0.1280.689" timestamp="1581943102826" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1581773318829">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1581773318829" />
+    <state width="647" height="352" key="XDebugger.FullValuePopup" timestamp="1581915562847">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="647" height="352" key="XDebugger.FullValuePopup/0.0.1280.689@0.0.1280.689" timestamp="1581915562847" />
     <state x="325" y="170" key="com.intellij.ide.util.TipDialog" timestamp="1581755047644">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -233,10 +260,16 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="521" y="75" width="548" height="537" key="ftp.server.browser/0.0.1280.689@0.0.1280.689" timestamp="1581664413309" />
+    <state x="303" y="10" key="search.everywhere.popup" timestamp="1581910042380">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="303" y="10" key="search.everywhere.popup/0.0.1280.689@0.0.1280.689" timestamp="1581910042380" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/RSNA_GAN$Pneumonia.coverage" NAME="Pneumonia Coverage Results" MODIFIED="1581664685372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RSNA_GAN$Pneumonia.coverage" NAME="Pneumonia Coverage Results" MODIFIED="1581911061857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RSNA_GAN$train_unet__1_.coverage" NAME="train_unet (1) Coverage Results" MODIFIED="1581831049526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RSNA_GAN$preprocess.coverage" NAME="preprocess Coverage Results" MODIFIED="1581919015603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RSNA_GAN$use_unet__1_.coverage" NAME="use_unet (1) Coverage Results" MODIFIED="1581943753599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RSNA_GAN$getmask.coverage" NAME="getmask Coverage Results" MODIFIED="1581669076412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RSNA_GAN$load_unet.coverage" NAME="load_unet Coverage Results" MODIFIED="1581856411392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
