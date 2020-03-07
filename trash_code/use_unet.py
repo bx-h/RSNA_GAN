@@ -1,23 +1,23 @@
-import os
 import matplotlib.pyplot as plt
 from keras.models import load_model
 from unet import train
-import keras.backend as K
 import torch.nn.functional as F
 from torch.utils.tensorboard import SummaryWriter
-import torchvision
 from datetime import datetime
 import numpy as np
 import cv2
 import torch
 
-from Pneumonia import PneumoniaDataset
+from trash_code.Pneumonia import PneumoniaDataset
 from torchvision import transforms
-from PIL import Image
 from PIL import ImageEnhance
 
 
 root = "/data15/boxi/anomaly detection/data/"
+
+# 查看图片
+logdir = "/data15/boxi/anomaly detection/runs/resizeImage/" + datetime.now().strftime("%Y%m%d-%H%M%S")
+
 
 
 class AddContrast(object):
@@ -32,30 +32,10 @@ class AddContrast(object):
         if img[256][256] < 0.15:
             contrast = 1.0
         else:
-            contrast = 3.0
+            contrast = 2.5
         enh_con = ImageEnhance.Contrast(sample)
         img_contrasted = enh_con.enhance(contrast)
         return img_contrasted
-
-
-transform = transforms.Compose(
-    [
-        AddContrast(),
-        transforms.Grayscale(1),
-        transforms.ToTensor()
-    ]
-)
-dataset = PneumoniaDataset(root=root, train=False, transform=transform)
-img, landmark = dataset[3] # PIL.Image.Image mode=RGB size=1024*1024
-
-a = img.squeeze().numpy()
-# pic1: [0,0.6745] a[256][256] = 0.3647 median:0.4470
-# pic7: [0,0.9019] a[256][256] = 0.1372 median:0.4745
-
-
-# 查看图片
-logdir = "/data15/boxi/anomaly detection/runs/resizeImage/" + datetime.now().strftime("%Y%m%d-%H%M%S")
-
 
 def show_img(img1, img2, img3, img4, img5, img6, tb=False, tb_dir=None):
     figure = plt.figure()
@@ -134,7 +114,7 @@ def denoising(img):
     kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (50, 50))
     de_b_noise = cv2.morphologyEx(img, cv2.MORPH_CLOSE, kernel)  # 去前景黑点
     er = cv2.erode(de_b_noise, kernel, iterations=1) # 缩小边缘
-    de_w_noise = cv2.morphologyEx(er, cv2.MORPH_OPEN, kernel) # 去前景白点
+    de_w_noise = cv2.morphologyEx(img, cv2.MORPH_OPEN, kernel) # 去前景白点
     dialation = cv2.dilate(de_w_noise, kernel, iterations=2) # 扩大
 
     return de_b_noise, er, de_w_noise, dialation
@@ -151,7 +131,6 @@ def findcontour(img):
     img2 = np.array(img * 255, dtype=np.uint8)
     ret, binary = cv2.threshold(img2,127,255,cv2.THRESH_BINARY)
     contours, hierarchy = cv2.findContours(binary, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
-    print(contours)
     areaArray = []
     for i, c in enumerate(contours):
         area = cv2.contourArea(c)
@@ -175,7 +154,7 @@ def crop_by_countours(origin_img, countours):
         img1 : torch.tensor[h, w]
         img2 : torch.tensor[h, w]
     """
-    print(countours)
+
     c1 = countours[0].reshape(-1, 2)
     c2 = countours[1].reshape(-1, 2)
     # result_c = result.copy()
@@ -185,48 +164,82 @@ def crop_by_countours(origin_img, countours):
     # for point in c2:
     #     cv2.circle(result_c, tuple(point), 5, (255, 0, 0), -1)
 
-    # ori_c = origin_img.squeeze().numpy().copy()
+    ori_c = origin_img.squeeze().numpy().copy()
 
     rect1 = cv2.boundingRect(c1)
     # print(rect1)
-    # x1, y1, w1, h1 = rect1
-    # cv2.rectangle(ori_c, (x1, y1), (x1 + w1, y1 + h1), (0, 255, 0), 2)
+    x1, y1, w1, h1 = rect1
+    cv2.rectangle(ori_c, (x1, y1), (x1 + w1, y1 + h1), (0, 255, 0), 2)
 
     rect2 = cv2.boundingRect(c2)
     # print(rect2)
-    # x2, y2, w2, h2 = rect2
-    # cv2.rectangle(ori_c, (x2, y2), (x2 + w2, y2 + h2), (0, 255, 0), 2)
+    x2, y2, w2, h2 = rect2
+    cv2.rectangle(ori_c, (x2, y2), (x2 + w2, y2 + h2), (0, 255, 0), 2)
 
-    # origin_img = origin_img.squeeze()
-    # img1 = origin_img[y1:y1+h1, x1:x1+w1]
-    # img2 = origin_img[y2:y2+h2, x2:x2+w2]
-    #
-    # show_img(origin_img.squeeze(), ori_c, img1, img2)
+    origin_img = origin_img.squeeze()
+    img1 = origin_img[y1:y1+h1, x1:x1+w1]
+    img2 = origin_img[y2:y2+h2, x2:x2+w2]
+
+    # plt.imshow(ori_c)
+    # plt.axis('off')
+    # plt.show()
+    # show_img(origin_img.squeeze(), ori_c, img1, img2, ori_c, ori_c)
     return rect1, rect2
+
+def showDetail_debug(img):
+    img = img * 255
+    img = img.astype('uint8')
+    plt.imshow(img)
+    plt.show()
+
+def showOrigin_debug(img):
+    plt.imshow(img.squeeze())
+    plt.show()
 
 
 def pack_up_all(img):
     roi, _ = get_roi(img)
- #   转为0,1 mask
- #    roi[roi < 0.01] = 0
- #    roi[roi > 0] = 1
-    
+    # 转为0,1 mask
+    # roi[roi < 0.01] = 0
+    # roi[roi > 0] = 1
+
     de_b_noise, er, de_w_noise, dialation = denoising(roi)
+
+
+    showDetail_debug(er)
+    showOrigin_debug(img)
+
+    de_w_noise[de_w_noise > 0] = 1
+    de_b_noise[de_b_noise > 0] = 1
 
     de_b_noise = torch.from_numpy(de_b_noise)
     er = torch.from_numpy(er)
     de_w_noise = torch.from_numpy(de_w_noise)
 
-    dialation[dialation < 0.01] = 0
     dialation[dialation > 0] = 1
     dialation = torch.from_numpy(dialation)
 
-    show_img(img.squeeze(), roi, de_b_noise, er, de_w_noise, dialation)
+    # show_img(img.squeeze(), roi, de_b_noise, er, de_w_noise, dialation)
     contours, hierarchy = findcontour(dialation)
     rect1, rect2 = crop_by_countours(img, contours)
     return rect1, rect2
 
 
-rect1, rect2 = pack_up_all(img)
-print(rect1)
-print(rect2)
+if __name__ == '__main__':
+    transform = transforms.Compose(
+        [
+            AddContrast(),
+            transforms.Grayscale(1),
+            transforms.ToTensor()
+        ]
+    )
+    dataset = PneumoniaDataset(root=root, train=False, transform=transform)
+    img, landmark, _ = dataset[6]  # PIL.Image.Image mode=RGB size=1024*1024
+
+    a = img.squeeze().numpy()
+    # pic1: [0,0.6745] a[256][256] = 0.3647 median:0.4470
+    # pic7: [0,0.9019] a[256][256] = 0.1372 median:0.4745
+
+    rect1, rect2 = pack_up_all(img)
+    print(rect1)
+    print(rect2)

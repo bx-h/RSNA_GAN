@@ -22,7 +22,7 @@ import mdai
 mdai.__version__
 
 mdai_client = mdai.Client(domain='public.md.ai', access_token="3de55d83f2705ec4159cc62926382533")
-p = mdai_client.project('aGq4k6NW', path='./lesson2-data')
+p = mdai_client.project('aGq4k6NW', path='../lesson2-data')
 
 # download MD.ai's dilated unet implementation
 UNET_URL = 'https://s3.amazonaws.com/md.ai-ml-lessons/unet.zip'
