@@ -1,6 +1,9 @@
 from torch import nn
 from torch.autograd import grad
 import torch
+import torch.nn.functional as F
+import numpy
+
 DIM = 64
 OUTPUT_DIM = 64*64*3
 
@@ -234,12 +237,15 @@ class GoodGenerator(nn.Module):
 
 
 class ConditionalGenerator(GoodGenerator):
+    """
+    继承good generator
+    """
     def __init__(self, num_classes, dim=DIM, output_dim=OUTPUT_DIM):
         super(ConditionalGenerator, self).__init__(dim, output_dim)
         self.gamma = nn.Embedding(num_classes, 8*self.dim)
         self.beta = nn.Embedding(num_classes, 8*self.dim)
 
-    def forward(self, input, label):
+    def forward(self, input, label=None):
         g, b = self.gamma(label), self.beta(label)
         g = g.unsqueeze(2).unsqueeze(2)
         b = b.unsqueeze(2).unsqueeze(2)
@@ -325,7 +331,7 @@ class ConditionalDiscriminator(GoodDiscriminator):
         # output = output.view(-1, 4*4*8*self.dim)
         return output
 
-    def forward(self, input, label):
+    def forward(self, input, label=None):
         g, b = self.gamma(label), self.beta(label)
         g = g.unsqueeze(2).unsqueeze(2)
         b = b.unsqueeze(2).unsqueeze(2)

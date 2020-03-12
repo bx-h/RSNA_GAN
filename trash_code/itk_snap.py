@@ -2,7 +2,7 @@ import nibabel as nib
 import numpy as np
 import matplotlib.pyplot as plt
 from torchvision import transforms
-from dataset import dcm_loader
+from lungdataset import dcm_loader
 from trash_code.use_unet import crop_roi
 
 

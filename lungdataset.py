@@ -125,3 +125,6 @@ if __name__ == "__main__":
     dataset = PneumoniaDataset(root=root, train=False, transform=transforms.ToTensor())
     print_dataset(dataset, print_time=1000)
     # normal_dataset(dataset, '/data15/boxi/anomaly detection/data/test-normal-data')
+
+    # train: counters: {2: 9456, 0: 7080, 1: 4809}
+    # test: counters: {2: 2365, 0: 1771, 1: 1203 }

@@ -10,7 +10,7 @@ testanomly:
 """
 import pandas as pd
 from PIL import Image
-from dataset import dcm_loader
+from lungdataset import dcm_loader
 import matplotlib.pyplot as plt
 import random
 import os
