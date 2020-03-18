@@ -25,10 +25,24 @@ sys.path.append(os.getcwd())
 # https://www.cs.toronto.edu/~kriz/cifar.html and fill in the path to the
 # extracted files here!
 
-pth_dir = "/data15/boxi/anomaly detection/runs/pth_dir/iter10000/"
-tb_dir = "/data15/boxi/anomaly detection/runs/tb_dir/iter10000/" + datetime.now().strftime("%Y%m%d-%H%M%S")
-eval_dir = "/data15/boxi/anomaly detection/runs/eval_dir/iter10000/"
-writer = SummaryWriter(log_dir=tb_dir)
+IMG_GAN_DIR = "/data15/boxi/anomaly detection/runs/imgsample/GAN/iter10000/"
+IMG_Encoder_DIR = "/data15/boxi/anomaly detection/runs/imgsample/Encoder/iter10000/"
+PTH_DIR = "/data15/boxi/anomaly detection/runs/pth_dir/iter10000/"
+TB_DIR = "/data15/boxi/anomaly detection/runs/tb_dir/iter10000/" + datetime.now().strftime("%Y%m%d-%H%M%S")
+EVAL_DIR = "/data15/boxi/anomaly detection/runs/eval_dir/iter10000/"
+
+if not os.path.exists(IMG_GAN_DIR):
+    os.makedirs(IMG_GAN_DIR)
+if not os.path.exists(IMG_Encoder_DIR):
+    os.makedirs(IMG_Encoder_DIR)
+if not os.path.exists(PTH_DIR):
+    os.makedirs(PTH_DIR)
+if not os.path.exists(TB_DIR):
+    os.makedirs(TB_DIR)
+if not os.path.exists(EVAL_DIR):
+    os.makedirs(EVAL_DIR)
+
+writer = SummaryWriter(log_dir=TB_DIR)
 
 DATAROOT = "/data15/boxi/anomaly detection/data/"
 
@@ -223,17 +237,17 @@ def wgan_training():
                 np.mean(G_cost_list),)
             )
         if iteration % 1000 == 0 and iteration != 0:
-            writer.add_image('Fake Image/' + str(iteration), fake*0.5+0.5, 0)
-            torch.save(netD.state_dict(), pth_dir + 'netD_%d.pth' % iteration)
-            torch.save(netG.state_dict(), pth_dir + 'netG_%d.pth' % iteration)
+            save_image(fake * 0.5 + 0.5, IMG_GAN_DIR + '{}.jpg'.format(iteration))
+            torch.save(netD.state_dict(), PTH_DIR + 'netD_%d.pth' % iteration)
+            torch.save(netG.state_dict(), PTH_DIR + 'netG_%d.pth' % iteration)
 
 
 def train_encoder():
     netG = GoodGenerator().to(device)
-    netG.load_state_dict(torch.load(pth_dir + 'netG_10000.pth'))
+    netG.load_state_dict(torch.load(PTH_DIR + 'netG_9000.pth'))
     netG.eval()
     netD = GoodDiscriminator().to(device)
-    netD.load_state_dict(torch.load(pth_dir + 'netD_10000.pth'))
+    netD.load_state_dict(torch.load(PTH_DIR + 'netD_9000.pth'))
     netD.eval()
     for p in netD.parameters():
         p.requires_grad = False
@@ -243,7 +257,7 @@ def train_encoder():
     dataloader, _ = one_class_dataloader(options.c, 2, BATCH_SIZE)
 
     netE = Encoder(DIM, NOISE_SIZE).to(device)
-    netE.load_state_dict(torch.load(pth_dir + 'netE.pth'))
+    # netE.load_state_dict(torch.load(PTH_DIR + 'netE.pth'))
 
     optimizer = optim.Adam(netE.parameters(), 1e-4, (0.0, 0.9))
 
@@ -267,19 +281,36 @@ def train_encoder():
         netE.eval()
         rec_image = netG(netE(x))
         d_input = torch.cat((x, rec_image), dim=0)
-        save_image(d_input*0.5+0.5, 'rec'+str(e)+'.bmp')
-    torch.save(netE.state_dict(), pth_dir + 'netE_2.pth')
+        save_image(d_input*0.5+0.5, IMG_Encoder_DIR + 'rec'+str(e)+'.bmp')
+    torch.save(netE.state_dict(), PTH_DIR + 'netE.pth')
 
 
 def evaluate():
+    """
+    in_real: 所选定class的图片
+    in_fake: 所选定class的生成图片
+    out_real: 非选定class的图片
+    out_fake: 非选定class的生成图片
+    rec_diff: reconstruct difference. 真实图片和生成图片间的像素级距离（欧几里得距离）
+    rec_score: 根据rec_diff获得
+    f_x, f_gx: discriminator所抽取出来的，真实图片特征与生成图片特征。
+    feat_diff：由f_x和f_gx得到的距离。值越小，表示generator越能好的生成图片
+    feat_score: 有feat_diff得来
+    outlier_score: a * rec_score + b * feat_score。值越大，越差。
+    y_true: 所有图片的label。为所选定class的为1，非选定class的为-1
+    y_score: discriminator。给予每张图片的分数。分数有outlier_score得来。
+    auc：计算y_true与-y_score的ROC
+
+    :return:
+    """
     netG = GoodGenerator().to(device)
-    netG.load_state_dict(torch.load(pth_dir + 'netG_10000.pth'))
+    netG.load_state_dict(torch.load(PTH_DIR + 'netG_9000.pth'))
     netG.eval()
     netD = GoodDiscriminator().to(device)
-    netD.load_state_dict(torch.load(pth_dir + 'netD_10000.pth'))
+    netD.load_state_dict(torch.load(PTH_DIR + 'netD_9000.pth'))
     netD.eval()
     netE = Encoder(DIM, NOISE_SIZE).to(device)
-    netE.load_state_dict(torch.load(pth_dir + 'netE_2.pth'))
+    netE.load_state_dict(torch.load(PTH_DIR + 'netE.pth'))
     netE.eval()
 
     _, dataloader = one_class_dataloader(options.c, 0, BATCH_SIZE)
@@ -311,8 +342,9 @@ def evaluate():
     in_fake = torch.cat(in_fake, dim=0)[:32]
     out_real = torch.cat(out_real, dim=0)[:32]
     out_fake = torch.cat(out_fake, dim=0)[:32]
-    save_image(torch.cat((in_real, in_fake), dim=0), eval_dir + 'real.bmp', normalize=True)
-    save_image(torch.cat((out_real, out_fake), dim=0), eval_dir + 'fake.bmp', normalize=True)
+
+    save_image(torch.cat((in_real, in_fake), dim=0), EVAL_DIR + 'real.bmp', normalize=True)
+    save_image(torch.cat((out_real, out_fake), dim=0), EVAL_DIR + 'fake.bmp', normalize=True)
     y_score = np.concatenate(y_score)
     y_true = np.concatenate(y_true)
     y_true[y_true != options.c] = -1
@@ -336,7 +368,7 @@ if __name__ == '__main__':
     device = torch.device('cuda:{}'.format(options.cuda))
     torch.cuda.set_device('cuda:{}'.format(options.cuda))
     if not options.eval:
-        wgan_training()
+        # wgan_training()
         train_encoder()
     else:
         evaluate()

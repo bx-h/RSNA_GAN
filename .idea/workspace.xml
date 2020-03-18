@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e9ccd97e-1afd-4006-8fbc-38edc079df49" name="Default Changelist" comment="" />
+    <list default="true" id="e9ccd97e-1afd-4006-8fbc-38edc079df49" name="Default Changelist" comment="add wgan-gp pytorch">
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fanogan.py" beforeDir="false" afterPath="$PROJECT_DIR$/fanogan.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,16 +48,37 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hbx\PycharmProjects\RSNA_GAN" />
+      <recent name="C:\Users\hbx\PycharmProjects\RSNA_GAN\trash_code" />
       <recent name="C:\Users\hbx\PycharmProjects\RSNA_GAN\Pytorch-UNet-master" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.use_unet (1)">
-    <configuration name="Pneumonia" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.fanogan">
+    <configuration name="Unnamed" type="PyRemoteDebugConfigurationType" factoryName="Python Remote Debug" nameIsGenerated="true">
+      <module name="RSNA_GAN" />
+      <option name="PORT" value="0" />
+      <option name="HOST" value="localhost" />
+      <PathMappingSettings>
+        <option name="pathMappings">
+          <list />
+        </option>
+      </PathMappingSettings>
+      <option name="REDIRECT_OUTPUT" value="true" />
+      <option name="SUSPEND_AFTER_CONNECT" value="true" />
+      <method v="2" />
+    </configuration>
+    <configuration name="fanogan" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="RSNA_GAN" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -66,8 +91,8 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Pneumonia.py" />
-      <option name="PARAMETERS" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fanogan.py" />
+      <option name="PARAMETERS" value="--class 0 --cuda 4 --eval" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -75,7 +100,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="preprocess" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="itk_snap" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="RSNA_GAN" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -88,7 +113,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/preprocess.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\hbx\PycharmProjects\RSNA_GAN\trash_code\itk_snap.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -97,7 +122,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="train_unet (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="lungdataset (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="RSNA_GAN" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -110,7 +135,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train_unet.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lungdataset.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -119,7 +144,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="use_unet (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="lungdataset" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="RSNA_GAN" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -132,7 +157,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/use_unet.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\hbx\PycharmProjects\RSNA_GAN\lungdataset.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -141,7 +166,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="use_unet" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="lungdataset" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="RSNA_GAN" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -154,7 +179,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\hbx\PycharmProjects\RSNA_GAN\use_unet.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\hbx\PycharmProjects\RSNA_GAN\lungdataset.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -163,13 +188,43 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="random_crop" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RSNA_GAN" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/random_crop.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.fanogan" />
+      <item itemvalue="Python.itk_snap" />
+      <item itemvalue="Python.lungdataset" />
+      <item itemvalue="Python.random_crop" />
+      <item itemvalue="Python.lungdataset (1)" />
+      <item itemvalue="Python Remote Debug.Unnamed" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.use_unet (1)" />
-        <item itemvalue="Python.preprocess" />
-        <item itemvalue="Python.Pneumonia" />
-        <item itemvalue="Python.use_unet" />
-        <item itemvalue="Python.train_unet (1)" />
+        <item itemvalue="Python.fanogan" />
+        <item itemvalue="Python.lungdataset (1)" />
+        <item itemvalue="Python.random_crop" />
+        <item itemvalue="Python.lungdataset" />
+        <item itemvalue="Python.itk_snap" />
       </list>
     </recent_temporary>
   </component>
@@ -197,114 +252,263 @@
       <updated>1581413930745</updated>
       <workItem from="1581413934542" duration="21472000" />
       <workItem from="1581655325469" duration="23641000" />
-      <workItem from="1581755046700" duration="64999000" />
+      <workItem from="1581755046700" duration="67492000" />
+      <workItem from="1582002277098" duration="514000" />
+      <workItem from="1582002807915" duration="24000" />
+      <workItem from="1582003620412" duration="7000" />
+      <workItem from="1582004173391" duration="4227000" />
+      <workItem from="1582027239690" duration="9557000" />
+      <workItem from="1582118126858" duration="8172000" />
+      <workItem from="1582204479863" duration="8651000" />
+      <workItem from="1582903578515" duration="4972000" />
+      <workItem from="1583239710872" duration="14000" />
+      <workItem from="1583307656787" duration="8529000" />
+      <workItem from="1583378043905" duration="4384000" />
+      <workItem from="1583399721950" duration="6000" />
+      <workItem from="1583399749711" duration="8000" />
+      <workItem from="1583569288647" duration="2838000" />
+      <workItem from="1583581949088" duration="25604000" />
+      <workItem from="1583739111245" duration="2504000" />
+      <workItem from="1583761495942" duration="14000" />
+      <workItem from="1583830737701" duration="3975000" />
+      <workItem from="1583851801075" duration="27611000" />
+      <workItem from="1584082429777" duration="1540000" />
+      <workItem from="1584084507954" duration="401000" />
+      <workItem from="1584111567629" duration="414000" />
+      <workItem from="1584112002899" duration="6000" />
+      <workItem from="1584113384276" duration="111000" />
+      <workItem from="1584120432198" duration="649000" />
+      <workItem from="1584165025183" duration="1805000" />
+      <workItem from="1584200540621" duration="15000" />
+      <workItem from="1584244489669" duration="1556000" />
+      <workItem from="1584285330661" duration="1869000" />
+      <workItem from="1584538500025" duration="3170000" />
     </task>
+    <task id="LOCAL-00001" summary="add wgan-gp pytorch">
+      <created>1583569491360</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583569491360</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fanogan">
+      <created>1583990134073</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1583990134073</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add wgan-gp pytorch" />
+    <MESSAGE value="fanogan" />
+    <option name="LAST_COMMIT_MESSAGE" value="fanogan" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="121" y="111" width="1095" height="504" key="DirDiffDialog" timestamp="1581669949898">
-      <screen x="0" y="0" width="1280" height="689" />
+    <state x="552" y="199" key="#Deployment" timestamp="1583570575579">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="121" y="111" width="1095" height="504" key="DirDiffDialog/0.0.1280.689@0.0.1280.689" timestamp="1581669949898" />
-    <state x="421" y="101" key="FileChooserDialogImpl" timestamp="1581773316328">
-      <screen x="0" y="0" width="1280" height="689" />
+    <state x="552" y="199" key="#Deployment/0.0.1920.1080@0.0.1920.1080" timestamp="1583570575579" />
+    <state x="297" y="154" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584538831155">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="421" y="101" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1581773316328" />
-    <state width="1237" height="148" key="GridCell.Tab.0.bottom" timestamp="1581952486896">
-      <screen x="0" y="0" width="1280" height="689" />
+    <state x="297" y="154" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584538831155" />
+    <state x="650" y="306" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/-1024.156.1024.768@0.0.1920.1080" timestamp="1583674875468" />
+    <state x="650" y="306" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/-1024.212.1024.768@0.0.1920.1080" timestamp="1583940228529" />
+    <state x="414" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1583997411797" />
+    <state x="542" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582213166701">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1237" height="148" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1581952486896" />
-    <state width="1237" height="148" key="GridCell.Tab.0.center" timestamp="1581952486896">
-      <screen x="0" y="0" width="1280" height="689" />
+    <state x="542" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1582213166701" />
+    <state x="740" y="245" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1583672760346">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1237" height="148" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1581952486896" />
-    <state width="1237" height="148" key="GridCell.Tab.0.left" timestamp="1581952486896">
-      <screen x="0" y="0" width="1280" height="689" />
+    <state x="740" y="245" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1080/-1024.156.1024.768@0.0.1920.1080" timestamp="1583672760346" />
+    <state x="560" y="134" key="CommitChangelistDialog2" timestamp="1583990132186">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1237" height="148" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1581952486896" />
-    <state width="1237" height="148" key="GridCell.Tab.0.right" timestamp="1581952486896">
-      <screen x="0" y="0" width="1280" height="689" />
+    <state x="560" y="134" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1583990132186" />
+    <state x="182" y="0" width="1643" height="1091" key="DirDiffDialog" timestamp="1583928119870">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1237" height="148" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1581952486896" />
-    <state width="1237" height="186" key="GridCell.Tab.1.bottom" timestamp="1581952447712">
-      <screen x="0" y="0" width="1280" height="689" />
+    <state x="121" y="0" width="1095" height="696" key="DirDiffDialog/0.0.1280.689@0.0.1280.689" timestamp="1582006008453" />
+    <state x="182" y="0" width="1643" height="1091" key="DirDiffDialog/0.0.1920.1080/-1024.156.1024.768@0.0.1920.1080" timestamp="1583654186250" />
+    <state x="182" y="0" width="1643" height="1091" key="DirDiffDialog/0.0.1920.1080/-1024.212.1024.768@0.0.1920.1080" timestamp="1583928119870" />
+    <state x="632" y="158" key="FileChooserDialogImpl" timestamp="1583984176870">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1237" height="186" key="GridCell.Tab.1.bottom/0.0.1280.689@0.0.1280.689" timestamp="1581952447712" />
-    <state width="1237" height="186" key="GridCell.Tab.1.center" timestamp="1581952447712">
-      <screen x="0" y="0" width="1280" height="689" />
+    <state x="421" y="101" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1582009637133" />
+    <state x="632" y="158" key="FileChooserDialogImpl/0.0.1920.1080/-1024.156.1024.768@0.0.1920.1080" timestamp="1583672278536" />
+    <state x="632" y="158" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1583984176870" />
+    <state width="1877" height="308" key="GridCell.Tab.0.bottom" timestamp="1584541199344">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1237" height="186" key="GridCell.Tab.1.center/0.0.1280.689@0.0.1280.689" timestamp="1581952447712" />
-    <state width="1237" height="186" key="GridCell.Tab.1.left" timestamp="1581952447712">
-      <screen x="0" y="0" width="1280" height="689" />
+    <state width="1237" height="46" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1582096829358" />
+    <state width="1877" height="308" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584541199344" />
+    <state width="1877" height="322" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1024.156.1024.768@0.0.1920.1080" timestamp="1583740400379" />
+    <state width="1877" height="220" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1024.212.1024.768@0.0.1920.1080" timestamp="1583940136401" />
+    <state width="1877" height="171" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1584002797742" />
+    <state width="1877" height="308" key="GridCell.Tab.0.center" timestamp="1584541199343">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1237" height="186" key="GridCell.Tab.1.left/0.0.1280.689@0.0.1280.689" timestamp="1581952447712" />
-    <state width="1237" height="186" key="GridCell.Tab.1.right" timestamp="1581952447712">
-      <screen x="0" y="0" width="1280" height="689" />
+    <state width="1237" height="46" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1582096829358" />
+    <state width="1877" height="308" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584541199343" />
+    <state width="1877" height="322" key="GridCell.Tab.0.center/0.0.1920.1080/-1024.156.1024.768@0.0.1920.1080" timestamp="1583740400377" />
+    <state width="1877" height="220" key="GridCell.Tab.0.center/0.0.1920.1080/-1024.212.1024.768@0.0.1920.1080" timestamp="1583940136401" />
+    <state width="1877" height="171" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1584002797742" />
+    <state width="1877" height="308" key="GridCell.Tab.0.left" timestamp="1584541199342">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1237" height="186" key="GridCell.Tab.1.right/0.0.1280.689@0.0.1280.689" timestamp="1581952447712" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1581773318829">
-      <screen x="0" y="0" width="1280" height="689" />
+    <state width="1237" height="46" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1582096829358" />
+    <state width="1877" height="308" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584541199342" />
+    <state width="1877" height="322" key="GridCell.Tab.0.left/0.0.1920.1080/-1024.156.1024.768@0.0.1920.1080" timestamp="1583740400377" />
+    <state width="1877" height="220" key="GridCell.Tab.0.left/0.0.1920.1080/-1024.212.1024.768@0.0.1920.1080" timestamp="1583940136400" />
+    <state width="1877" height="171" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1584002797741" />
+    <state width="1877" height="308" key="GridCell.Tab.0.right" timestamp="1584541199343">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1581773318829" />
-    <state width="647" height="352" key="XDebugger.FullValuePopup" timestamp="1581915562847">
-      <screen x="0" y="0" width="1280" height="689" />
+    <state width="1237" height="46" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1582096829358" />
+    <state width="1877" height="308" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584541199343" />
+    <state width="1877" height="322" key="GridCell.Tab.0.right/0.0.1920.1080/-1024.156.1024.768@0.0.1920.1080" timestamp="1583740400379" />
+    <state width="1877" height="220" key="GridCell.Tab.0.right/0.0.1920.1080/-1024.212.1024.768@0.0.1920.1080" timestamp="1583940136401" />
+    <state width="1877" height="171" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584002797742" />
+    <state width="1877" height="308" key="GridCell.Tab.1.bottom" timestamp="1584541224689">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1237" height="284" key="GridCell.Tab.1.bottom/0.0.1280.689@0.0.1280.689" timestamp="1582093788897" />
+    <state width="1877" height="308" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584541224689" />
+    <state width="1877" height="322" key="GridCell.Tab.1.bottom/0.0.1920.1080/-1024.156.1024.768@0.0.1920.1080" timestamp="1583740400379" />
+    <state width="1877" height="322" key="GridCell.Tab.1.bottom/0.0.1920.1080/-1024.212.1024.768@0.0.1920.1080" timestamp="1583933347828" />
+    <state width="1877" height="322" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1584002797652" />
+    <state width="1877" height="308" key="GridCell.Tab.1.center" timestamp="1584541224689">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1237" height="284" key="GridCell.Tab.1.center/0.0.1280.689@0.0.1280.689" timestamp="1582093788897" />
+    <state width="1877" height="308" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584541224689" />
+    <state width="1877" height="322" key="GridCell.Tab.1.center/0.0.1920.1080/-1024.156.1024.768@0.0.1920.1080" timestamp="1583740400379" />
+    <state width="1877" height="322" key="GridCell.Tab.1.center/0.0.1920.1080/-1024.212.1024.768@0.0.1920.1080" timestamp="1583933347828" />
+    <state width="1877" height="322" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1584002797651" />
+    <state width="1877" height="308" key="GridCell.Tab.1.left" timestamp="1584541224688">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1237" height="284" key="GridCell.Tab.1.left/0.0.1280.689@0.0.1280.689" timestamp="1582093788897" />
+    <state width="1877" height="308" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584541224688" />
+    <state width="1877" height="322" key="GridCell.Tab.1.left/0.0.1920.1080/-1024.156.1024.768@0.0.1920.1080" timestamp="1583740400379" />
+    <state width="1877" height="322" key="GridCell.Tab.1.left/0.0.1920.1080/-1024.212.1024.768@0.0.1920.1080" timestamp="1583933347828" />
+    <state width="1877" height="322" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1584002797651" />
+    <state width="1877" height="308" key="GridCell.Tab.1.right" timestamp="1584541224689">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1237" height="284" key="GridCell.Tab.1.right/0.0.1280.689@0.0.1280.689" timestamp="1582093788897" />
+    <state width="1877" height="308" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584541224689" />
+    <state width="1877" height="322" key="GridCell.Tab.1.right/0.0.1920.1080/-1024.156.1024.768@0.0.1920.1080" timestamp="1583740400379" />
+    <state width="1877" height="322" key="GridCell.Tab.1.right/0.0.1920.1080/-1024.212.1024.768@0.0.1920.1080" timestamp="1583933347828" />
+    <state width="1877" height="322" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584002797652" />
+    <state x="209" y="0" key="SettingsEditor" timestamp="1583588198906">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="139" y="0" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1582009715772" />
+    <state x="209" y="0" key="SettingsEditor/0.0.1920.1080/-1024.156.1024.768@0.0.1920.1080" timestamp="1583588198906" />
+    <state x="209" y="0" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1583570563896" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1583990153343">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1583990153343" />
+    <state width="971" height="532" key="XDebugger.FullValuePopup" timestamp="1584540000848">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="647" height="352" key="XDebugger.FullValuePopup/0.0.1280.689@0.0.1280.689" timestamp="1581915562847" />
-    <state x="325" y="170" key="com.intellij.ide.util.TipDialog" timestamp="1581755047644">
+    <state width="971" height="532" key="XDebugger.FullValuePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1584540000848" />
+    <state x="488" y="257" key="com.intellij.ide.util.TipDialog" timestamp="1584538504291">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="325" y="170" key="com.intellij.ide.util.TipDialog/0.0.1280.689@0.0.1280.689" timestamp="1582027258067" />
+    <state x="488" y="257" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584538504291" />
+    <state x="488" y="267" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/-1024.156.1024.768@0.0.1920.1080" timestamp="1583761497303" />
+    <state x="488" y="267" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/484.-768.1024.768@0.0.1920.1080" timestamp="1583851800337" />
+    <state x="488" y="267" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1583399749649" />
+    <state x="521" y="75" width="548" height="537" key="ftp.server.browser" timestamp="1582004351707">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="325" y="170" key="com.intellij.ide.util.TipDialog/0.0.1280.689@0.0.1280.689" timestamp="1581755047644" />
-    <state x="521" y="75" width="548" height="537" key="ftp.server.browser" timestamp="1581664413309">
+    <state x="521" y="75" width="548" height="537" key="ftp.server.browser/0.0.1280.689@0.0.1280.689" timestamp="1582004351707" />
+    <state x="319" y="0" width="713" height="689" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1582009713896">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="521" y="75" width="548" height="537" key="ftp.server.browser/0.0.1280.689@0.0.1280.689" timestamp="1581664413309" />
-    <state x="303" y="10" key="search.everywhere.popup" timestamp="1581910042380">
-      <screen x="0" y="0" width="1280" height="689" />
+    <state x="319" y="0" width="713" height="689" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1280.689@0.0.1280.689" timestamp="1582009713896" />
+    <state x="455" y="15" width="1008" height="1024" key="search.everywhere.popup" timestamp="1582130687761">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="303" y="10" key="search.everywhere.popup/0.0.1280.689@0.0.1280.689" timestamp="1581910042380" />
+    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup/0.0.1280.689@0.0.1280.689" timestamp="1582028369177" />
+    <state x="455" y="15" width="1008" height="1024" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1582130687761" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/use_unet.py</url>
-          <line>178</line>
-          <option name="timeStamp" value="13" />
+          <url>file://$PROJECT_DIR$/trash_code/itk_snap.py</url>
+          <line>44</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/use_unet.py</url>
-          <line>154</line>
-          <option name="timeStamp" value="14" />
+          <url>file://$PROJECT_DIR$/trash_code/use_unet.py</url>
+          <line>225</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/use_unet.py</url>
-          <line>56</line>
-          <option name="timeStamp" value="16" />
+          <url>file://$PROJECT_DIR$/trash_code/use_unet.py</url>
+          <line>209</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/use_unet.py</url>
-          <line>31</line>
-          <option name="timeStamp" value="17" />
+          <url>file://$PROJECT_DIR$/fanogan.py</url>
+          <line>132</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/fanogan.py</url>
+          <line>346</line>
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="np.median(a)" language="Python" />
-        <watch expression="img.size()" language="Python" />
-        <watch expression="img[300][300]" language="Python" />
+        <watch expression="label" language="Python" />
+        <watch expression="feat_diff" language="Python" />
+        <watch expression="in_real[0].size()" language="Python" />
+        <watch expression="y_true" language="Python" />
+        <watch expression="y_score" language="Python" />
+        <watch expression="y_true[0].size()" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/RSNA_GAN$Pneumonia.coverage" NAME="Pneumonia Coverage Results" MODIFIED="1581911061857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RSNA_GAN$fanogan.coverage" NAME="fanogan Coverage Results" MODIFIED="1584541199187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RSNA_GAN$train_unet__1_.coverage" NAME="train_unet (1) Coverage Results" MODIFIED="1581831049526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/RSNA_GAN$preprocess.coverage" NAME="preprocess Coverage Results" MODIFIED="1581919015603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/RSNA_GAN$use_unet__1_.coverage" NAME="use_unet (1) Coverage Results" MODIFIED="1581952486892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RSNA_GAN$preprocess.coverage" NAME="preprocess Coverage Results" MODIFIED="1582094009235" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RSNA_GAN$Pneumonia_ori.coverage" NAME="Pneumonia_ori Coverage Results" MODIFIED="1582120709253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RSNA_GAN$itk_snap.coverage" NAME="itk_snap Coverage Results" MODIFIED="1582211409519" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RSNA_GAN$dataset__1_.coverage" NAME="dataset (1) Coverage Results" MODIFIED="1583328530477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RSNA_GAN$random_crop.coverage" NAME="random_crop Coverage Results" MODIFIED="1583380076773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RSNA_GAN$use_unet__1_.coverage" NAME="use_unet (1) Coverage Results" MODIFIED="1582907236347" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RSNA_GAN$getmask.coverage" NAME="getmask Coverage Results" MODIFIED="1581669076412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RSNA_GAN$lungdataset__1_.coverage" NAME="lungdataset (1) Coverage Results" MODIFIED="1583985052755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RSNA_GAN$load_unet.coverage" NAME="load_unet Coverage Results" MODIFIED="1581856411392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
